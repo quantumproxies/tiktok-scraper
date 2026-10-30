@@ -1,0 +1,55 @@
+{
+ "run_id": "cmvk5o6b80aal41o5hnthyq7g",
+ "slug": "tiktok_profile",
+ "version": "1.0.1",
+ "status": "done",
+ "input": {
+  "usernames": [
+   "nasa",
+   "@natgeo"
+  ],
+  "max_results": 2
+ },
+ "count": 2,
+ "partial": false,
+ "finished_at": "2026-10-22T23:12:33.528Z",
+ "results": [
+  {
+   "url": "https://www.tiktok.com/@nasa",
+   "likes": 11300000,
+   "posts": 58,
+   "user_id": "7664638705177150477",
+   "category": null,
+   "platform": "tiktok",
+   "username": "nasa",
+   "verified": true,
+   "biography": "Making the seemingly impossible, possible.",
+   "followers": 2100000,
+   "following": 23,
+   "full_name": "NASA",
+   "is_private": false,
+   "is_business": false,
+   "profile_pic": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/e5143212a59c09a008bf50f487d54d1f~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=ff01af68&x-expires=1792882800&x-signature=A5CNRQtyy3jRBwB7SquTBbN85IA%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+   "external_url": "science.nasa.gov/feature/artemis-ii-preliminary-lunar-science-report"
+  },
+  {
+   "url": "https://www.tiktok.com/@natgeo",
+   "likes": 55700000,
+   "posts": 1555,
+   "user_id": "6780344874811442181",
+   "category": "Shopping & Retail",
+   "platform": "tiktok",
+   "username": "natgeo",
+   "verified": true,
+   "biography": "Step into wonder and find your inner explorer with National Geographic",
+   "followers": 9700000,
+   "following": 62,
+   "full_name": "National Geographic",
+   "is_private": false,
+   "is_business": true,
+   "profile_pic": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-avt-0068-tx2/324924e171e481040a1ea202962f6e07~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=2a8847d1&x-expires=1792882800&x-signature=XzA1wxwG%2FH17s4IVZH8ooDyHCyI%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+   "external_url": "spr.ly/natgeotiktok"
+  }
+ ],
+ "_note": "Real run of 2026-10-22; the emoji at the end of each bio is removed. Profile picture URLs are signed and expire."
+}

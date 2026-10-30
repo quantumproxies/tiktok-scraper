@@ -1,0 +1,107 @@
+{
+ "cli": "tiktok-scraper",
+ "name": "TikTok Scraper",
+ "version": "0.1.0",
+ "description": "TikTok scraper for Python and the command line: public profile stats (followers, likes, videos, bio) and per-video metrics (views, likes, comments, shares, saves, sound, hashtags) as JSON or CSV. Free and open source; sign in with your QuanticData account, no proxies or headless browser to run.",
+ "links": {
+  "repo": "https://github.com/quantumproxies/tiktok-scraper",
+  "page": "https://quanticdata.io/collectors/tiktok-scraper-api/?utm_source=github&utm_medium=cli&utm_campaign=tiktok-scraper",
+  "billing": "https://app.quanticdata.io/billing?utm_source=github&utm_medium=cli&utm_campaign=tiktok-scraper",
+  "pricing": "https://quanticdata.io/pricing/?utm_source=github&utm_medium=cli&utm_campaign=tiktok-scraper"
+ },
+ "commands": [
+  {
+   "name": "profiles",
+   "collector": "tiktok_profile",
+   "method": "profiles",
+   "help": "public profile stats for one or more TikTok accounts",
+   "description": "Public TikTok profile stats — followers, likes, videos, bio.",
+   "positional": "usernames",
+   "positional_is_list": true,
+   "positional_optional": false,
+   "columns": [
+    "username",
+    "full_name",
+    "followers",
+    "following",
+    "likes",
+    "posts",
+    "verified"
+   ],
+   "sample": "tiktok_profile",
+   "inputs": [
+    {
+     "name": "usernames",
+     "type": "string[]",
+     "required": true,
+     "description": "Handles (with or without @) or profile URLs.",
+     "arg": "usernames"
+    },
+    {
+     "name": "country",
+     "type": "string",
+     "required": false,
+     "description": "Country to run the request from, as an ISO 3166-1 alpha-2 code (us, gb, de...).",
+     "arg": "country"
+    },
+    {
+     "name": "max_results",
+     "type": "integer",
+     "required": false,
+     "description": "How many profiles to deliver at most (1–50). You pay only for delivered profiles.",
+     "min": 1,
+     "max": 50,
+     "default": 10,
+     "arg": "max_results"
+    }
+   ]
+  },
+  {
+   "name": "videos",
+   "collector": "tiktok_video",
+   "method": "videos",
+   "help": "views, likes, comments, shares and saves of one or more videos",
+   "description": "Per-video TikTok metrics — views, likes, comments, shares, saves.",
+   "positional": "videos",
+   "positional_is_list": true,
+   "positional_optional": false,
+   "columns": [
+    "video_id",
+    "author",
+    "created_at",
+    "views",
+    "likes",
+    "comments",
+    "shares",
+    "saves"
+   ],
+   "sample": "tiktok_video",
+   "inputs": [
+    {
+     "name": "videos",
+     "type": "string[]",
+     "required": true,
+     "description": "Video URLs (https://www.tiktok.com/@user/video/123…) or numeric ids.",
+     "arg": "videos"
+    },
+    {
+     "name": "country",
+     "type": "string",
+     "required": false,
+     "description": "Country to run the request from, as an ISO 3166-1 alpha-2 code (us, gb, de...).",
+     "arg": "country"
+    },
+    {
+     "name": "max_results",
+     "type": "integer",
+     "required": false,
+     "description": "How many videos to deliver at most (1–50). You pay only for delivered videos.",
+     "min": 1,
+     "max": 50,
+     "default": 10,
+     "arg": "max_results"
+    }
+   ]
+  }
+ ]
+}
